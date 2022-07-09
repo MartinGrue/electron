@@ -1,0 +1,28 @@
+{
+  "name": "selectfile",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build/main.js",
+  "build": {
+    "files": [
+      "build/**/*"
+    ]
+  },
+  "scripts": {
+    "start": "concurrently -k \"build-electron -d\" \"wait-on build/.build-electron-done && electron .\"",
+    "build": "build-electron"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^19.0.8"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "devDependencies": {
+    "build-electron": "^1.0.5",
+    "concurrently": "^7.2.2",
+    "wait-on": "^6.0.1"
+  }
+}
